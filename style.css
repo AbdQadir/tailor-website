@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+    background: white;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.logo{
+
+    font-family: 'Lexend Peta', sans-serif;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation a{
+    color: black;
+    text-decoration: none;
+}
+
+.navigation a:hover{
+    cursor: pointer;
+    color: salmon;
+}
+
+.nav-link{
+    padding: 20px 0px;
+    margin-right: 25px;
+}
+
+.hero{
+    position:relative;
+    width: 100%;
+    padding-top: 60px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/hero-img1.jpeg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4)
+}
+
+.hero h2{
+    text-align: center;
+    width: 60%;
+    color: white;
+    z-index: 1;
+    font-size: 62px;
+    font-weight: 600;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+}
+
+.intro-half{
+    margin-top: 90px;
+    margin-bottom: 70px;
+    height: 500px;
+    width: 40vw;
+}
+
+.intro-half:nth-child(1){
+    margin-right: 40px;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.intro-image{
+    width: 100%;
+    height: auto;
+    transform: translateY(-10%);
+}
+
+.img-wrapper{
+    width:100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.intro-image1{
+    width: 100%;
+    height: auto; 
+}
+
+.intro-text{
+    margin-top: 20px;
+}
+
+.intro-text h2{
+    font-size: 32px;
+}
+
+.intro-text p{
+    margin-top: 15px;
+}
+
+.work-btn{
+    margin-top: 20px;
+    display : inline-block;
+    padding: 13px 30px;
+    border: 2px solid black;
+    transition: all 0.2s ease-out;
+}
+.work-btn:hover{
+    cursor: pointer;
+    border: 2px solid salmon;
+    color: salmon;
+}
+
+.service{
+    padding-top: 90px;
+    padding-bottom: 30px;
+    background-color: #ededed;
+}
+
+.service header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.wrapper{
+    max-height: 320px;
+    height: auto;
+    overflow: hidden;
+}
+
+.service-row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-column-gap: 5%;
+    margin-bottom: 60px;
+}
+
+.service-tile{
+    overflow: hidden;  
+}
+
+.service-img{
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    opacity: 1;
+}
+
+.service-tile:hover{
+    cursor: pointer;
+}
+
+.service-tile:hover .service-img{
+    cursor: pointer;
+    opacity: 0.75;
+    transform: scale(1.1);
+}
+
+.service-tile:nth-child(1){
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.caption{
+    position: relative;
+    margin-top: 18px;
+    font-size: 24px;
+    padding-bottom: 18px;
+}
+
+.caption::after{
+    content: "";
+    position: absolute;
+    width: 20%;
+    left:0;
+    bottom: 0;
+    border-bottom: 2px solid black;
+}
+
+.clients header{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.customers-row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    grid-gap: 5%;
+    margin-bottom: 80px;
+}
+
+
+.customers-tile:nth-child(1){
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.client-imgWrap{
+    height: auto;
+    width: 180px;
+
+}
+
+.client-imgWrap img{
+    height: 100%;
+    width: 100%;
+}
+
+.quote{
+    font-size: 50px;
+    color: #828282;
+}
