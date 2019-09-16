@@ -363,3 +363,71 @@ footer{
 .copyright-wrapper{
     margin-bottom: 50px;
 }
+
+/*Contacts section starts*/
+
+.navigation-belt{
+    position: relative;
+    background: #444;
+    color: #fff;
+    padding-top: 90px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.navigation-belt p{
+    position: absolute;
+    right: 50px;
+    bottom: 10%;
+}
+
+.address-holder{
+    height: 80vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 8% 1fr 1fr 8%;
+}
+
+.address-wrapper{
+    padding: 20px;
+    height: 400px;
+    width: 550px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.address-wrapper i{
+    color: salmon;
+    width: 30px;
+    font-size: 20px;
+    line-height: 32px;
+    margin-right: 5px;
+}
+
+.address-city{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.shop-name{
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+#map{
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
+.shop-wrapper{
+    max-height: 400px;
+    max-width: 550px;
+}
+
+#shop-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
