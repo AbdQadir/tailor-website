@@ -10,6 +10,17 @@ body{
     overflow-x: hidden;
 }
 
+#homepage, #contacts-page, #services-page{
+    opacity: 0;
+    animation: fade 0.2s cubic-bezier(.09,.25,.38,.99) 0.5s 1 forwards;
+}
+
+@keyframes fade{
+    100%{
+        opacity: 1;
+    }
+}
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -42,6 +53,7 @@ body{
 .navigation a{
     color: black;
     text-decoration: none;
+    transition: all 0.4s ease;
 }
 
 .navigation a:hover{
@@ -80,17 +92,51 @@ body{
     background: rgba(0, 0, 0, 0.4)
 }
 
-.hero h2{
+
+#frontline{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     width: 60%;
     color: white;
     z-index: 1;
     font-size: 62px;
     font-weight: 600;
+    opacity: 0;
 }
+
 
 .salmon-colored{
     color: salmon;
+}
+
+.contacts-banner::after, .service-banner::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.contacts-banner div, .service-banner div{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight:600;
+}
+
+
+.scroll-show{
+    opacity: 0;
 }
 
 .intro{
@@ -101,27 +147,34 @@ body{
 .intro-half{
     margin-top: 90px;
     margin-bottom: 70px;
-    height: 500px;
+    height: 80vh;
     width: 40vw;
     box-sizing: border-box;
 }
 
 .intro-half:nth-child(1){
     margin-right: 40px;
-    height: 80vh;
     overflow: hidden;
+}
+
+.intro-half:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .intro-image{
     width: 100%;
     height: auto;
-    transform: translateY(-10%);
+    object-fit: cover;
+    object-position: 50% 120%;
 }
 
 .img-wrapper{
     width:100%;
-    height: 230px;
+    height: 14rem;
     overflow: hidden;
+    margin-top: auto;
 }
 
 .intro-image1{
@@ -129,21 +182,17 @@ body{
     height: auto; 
 }
 
-.intro-text{
-    margin-top: 20px;
-}
-
 .intro-text h2{
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .intro-text p{
-    margin-top: 15px;
+    margin-top: 0.9rem;
 }
 
 .work-btn{
     margin-top: 20px;
-    display : inline-block;
+    display: inline-block;
     padding: 13px 30px;
     border: 1px solid #000;
     transition: all 0.2s ease-out;
@@ -170,8 +219,7 @@ body{
 }
 
 .wrapper{
-    max-height: 320px;
-    height: auto;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -185,6 +233,8 @@ body{
 
 .service-tile{
     overflow: hidden;  
+    text-decoration: none;
+    color: #000;
 }
 
 .service-img{
@@ -228,7 +278,7 @@ body{
 }
 
 .clients{
-    background: url("./images/sewing-machine.jpg");
+    background-image: url("./images/sewing-machine.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -306,13 +356,15 @@ body{
     font-size: 38px;
 }
 
-.cta{
+.cta, #services-pages .cta{
     position: relative;
+    color: #000;
     padding: 12px 25px;
     background: transparent;
     margin-top: 30px;
     border: 1px solid #000;
     transition: all .2s ease;
+    text-decoration: none;
 }
 
 .cta:hover{
@@ -335,6 +387,20 @@ footer{
     flex-direction: column;
     justify-content: center;
 }
+
+#services-page footer::after, #contacts-page footer::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(250, 221, 191, 0.25);
+}
+
+#services-page footer div, #contacts-page footer div{
+    z-index: 1;
+} 
 
 .social-wrapper{
     display: flex;
@@ -362,72 +428,4 @@ footer{
 
 .copyright-wrapper{
     margin-bottom: 50px;
-}
-
-/*Contacts section starts*/
-
-.navigation-belt{
-    position: relative;
-    background: #444;
-    color: #fff;
-    padding-top: 90px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    font-weight: bold;
-}
-
-.navigation-belt p{
-    position: absolute;
-    right: 50px;
-    bottom: 10%;
-}
-
-.address-holder{
-    height: 80vh;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 8% 1fr 1fr 8%;
-}
-
-.address-wrapper{
-    padding: 20px;
-    height: 400px;
-    width: 550px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.address-wrapper i{
-    color: salmon;
-    width: 30px;
-    font-size: 20px;
-    line-height: 32px;
-    margin-right: 5px;
-}
-
-.address-city{
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.shop-name{
-    font-size: 26px;
-    margin-bottom: 8px;
-}
-
-#map{
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-}
-
-.shop-wrapper{
-    max-height: 400px;
-    max-width: 550px;
-}
-
-#shop-img{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 }
