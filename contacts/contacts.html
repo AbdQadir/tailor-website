@@ -10,54 +10,83 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="./contactstyle.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     </head>
-    <body>
+    <body id="contacts-page">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header class="navbar">
             <a href="../index.html"><h2 class="logo">GOODLUCK</h2></a>
             <nav class="navigation">
-                <a href="#"><div class="nav-link">ABOUT</div></a>
-                <a href="#"><div class="nav-link">SERVICES</div></a>
-                <a href="#"><div class="nav-link">TESTIMONIALS</div></a>
-                <a href="#contacts"><div class="nav-link salmon-colored">CONTACT</div></a>
+                <a href="../index.html"><div class="nav-link">HOME</div></a>
+                <a href="../services/service.html"><div class="nav-link">SERVICES</div></a>
+                <a href="../contacts/contacts.html"><div class="nav-link salmon-colored">CONTACT</div></a>
             </nav>
         </header>
-        <div class="navigation-belt">
-            <p>Home / <span class="salmon-colored">Contacts</span></p>
-        </div>
-        <section id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.6142429362762!2d84.88424261504704!3d27.010749983085457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39935442a26bb8c5%3A0x4aca3ac2ed38c8ab!2sBirgunj%20Bus%20Park!5e0!3m2!1sen!2sqa!4v1568556461269!5m2!1sen!2sqa" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <section class="contacts-banner">
+            <div>We <span class="salmon-colored">would love</span> to hear <span class="salmon-colored">from You</span>.</div>
         </section>
         <section class="address-holder">
             <div class="address-wrapper">
-                <h3 class="address-city"> Birgunj</h3>
-                <p class="shop-name">Goodluck Tailors</p>
-                <p class="full-address"><i class="fas fa-map-marker-alt"></i>Bus Park, Birgunj 44300, Nepal</p>
-                <p class="phone-number"><i class="fas fa-tty"></i>Tel: +971-5638-52251</p>
-                <p class="monile-number"><i class="fas fa-mobile-alt"></i>Mob: +971-5638-52251</p>
-                <p class="email"><i class="fas fa-envelope-open-text"></i>Email: hello@goodluck.com</p>
-                <p class="email"><i class="fas fa-link"></i>Web: goodlucktailors.com</p>
+                <div class="address-contents">
+                    <h3 class="address-city"> Birgunj</h3>
+                    <p class="shop-name">Goodluck Tailors</p>
+                    <p class="full-address"><i class="fas fa-map-marker-alt"></i>Bus Park, Birgunj 44300, Nepal</p>
+                    <p class="phone-number"><i class="fas fa-tty"></i>Tel: +971-5638-52251</p>
+                    <p class="monile-number"><i class="fas fa-mobile-alt"></i>Mob: +971-5638-52251</p>
+                    <p class="email"><i class="fas fa-envelope-open-text"></i>Email: hello@goodluck.com</p>
+                    <p class="email"><i class="fas fa-link"></i>Web: goodlucktailors.com</p>
+                </div>
+                
             </div>
-            <div class="shop-wrapper">
-                <img id="shop-img" src = "../images/shop.jpg"/>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.6142429362762!2d84.88424261504704!3d27.010749983085457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39935442a26bb8c5%3A0x4aca3ac2ed38c8ab!2sBirgunj%20Bus%20Park!5e0!3m2!1sen!2sqa!4v1568556461269!5m2!1sen!2sqa" width= "100%" height= "400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </section>
 
+        <section class="form-section">
+            <h4>Leave a message</h4>
+            <form id="contact-form">
+                <div class="form-item">
+                    <div class="label">
+                    <label id="name-label" for="name">Name:</label>
+                    </div>
+                    <div class="entry">
+                    <input name="name" type="text" class="entry-field" id="name" placeholder="Enter your name here" required>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label">
+                    <label id="email-label" for="email">Email:</label>
+                    </div>
+                    <div class="entry">
+                    <input name="email" type="email" class="entry-field" id="email" placeholder="Enter your email here" required>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label">
+                    <label id="message-label" for="message">Message:</label>
+                    </div>
+                    <div class="entry">
+                    <textarea name="message" class="entry-field" id="message" style="height:130px;" placeholder="Enter your message here" required></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit">Send</button>
+            </form>
         </section>
         <footer>
-            <section class="social-wrapper">
+            <div class="social-wrapper">
                 <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
                 <div class="social-icon"><i class="fab fa-instagram"></i></div>
-            </section>
+            </div>
             <div id="copyright-wrapper">
                 <p>All rights reserved &copy;Goodluck Tailors 2019</p>
             </div>
         </footer>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="./script.js" async defer></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1ms9i07HdqzQiAtYdF53XZY70DmH8nDM&callback=initMap"></script>
         <script src="./app.js" async defer></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1ms9i07HdqzQiAtYdF53XZY70DmH8nDM&callback=initMap">
         </script>
     </body>
 </html>
