@@ -13,50 +13,51 @@
         <link href="https://fonts.googleapis.com/css?family=Lexend+Peta|Poppins:200,300,400,500,600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     </head>
-    <body>
+    <body id="homepage">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header class="navbar">
-            <a href="#home"><h2 class="logo">GOODLUCK</h2></a>
+            <a href="./index.html"><h2 class="logo">GOODLUCK</h2></a>
             <nav class="navigation">
-                <a href="#intro"><div class="nav-link">ABOUT</div></a>
-                <a href="#services"><div class="nav-link">SERVICES</div></a>
-                <a href="#clients"><div class="nav-link">TESTIMONIALS</div></a>
+                <a href="./index.html"><div class="nav-link">HOME</div></a>
+                <a href="./services/service.html"><div class="nav-link">SERVICES</div></a>
                 <a href="./contacts/contacts.html"><div class="nav-link">CONTACT</div></a>
             </nav>
         </header>
         <section class="hero" id="home">
-            <h2>Hi, we are <span class="salmon-colored">Goodluck</span>, the best <span class="salmon-colored">tailors</span> in the Town.</h2>
+            <h2 id="frontline">Hi, we are <span class="salmon-colored">Goodluck</span>, the best <span class="salmon-colored">tailors</span> in the Town.</h2>
         </section>
         <section class="intro" id="intro">
             <div class="intro-half">
-                <img class="intro-image" src="./images/intro-image.jpg"/>
+                <img class="intro-image scroll-show" src="./images/intro-image.jpg"/>
             </div>
             <div class="intro-half">
-                <div class="img-wrapper"><img class="intro-image1" src="./images/hero-image.jpg"></div>
-                <div class="intro-text">
+
+                <div class="intro-text scroll-show">
                     <h2 class="salmon-colored">Who we are</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id autem temporibus blanditiis accusamus perferendis libero accusantium nisi itaque tempore, harum aliquid aut, sapiente dolor tenetur.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus.</p>
-                    <a href="#" class="work-btn">All Services</a>
+                    <a href="./services/service.html" class="work-btn">All Services</a>
                 </div>
+                <div class="img-wrapper"><img class="intro-image1 scroll-show" src="./images/hero-image.jpg"></div>
+                
             </div>
         </section>
         <section class="service" id="services">
             <header><h2>Our Services</h2></header>
             <div class="service-row">
-                <figure class="service-tile">
+                <a href="./services/service.html" class="service-tile scroll-show">
                     <div class="wrapper"><img src="./images/ladies-tailoring.jpeg" class="service-img"/></div>
                     <figcaption class="caption">Ladies tailotring</figcaption>
-                </figure>
-                <figure class="service-tile">
+                </a>
+                <a href="./services/service.html/#ladies-tailoring" class="service-tile scroll-show">
                     <div class="wrapper"><img src="./images/gents-tailoring.jpeg" class="service-img"/></div>
                     <figcaption class="caption">Gents tailoring</figcaption>
-                </figure>
+                </a>
             </div>
         </section>
-        <section class="clients" id="clients">
+        <section class="clients scroll-show" id="clients">
             <header><h2>What our customers say about us?</h2></header>
             <div class="customers-row">
                 <div class="customers-tile">
@@ -88,7 +89,7 @@
         <Section class="contact">
             <p>Lorem ipsum dolorsiment jdurnndt jespinratatkulam hinfb hirfepmak aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu</p>
             <h3>Let’s <span class="salmon-colored">handcraft</span> your new <span class="salmon-colored">dress up</span>!</h3>
-            <div class="cta">Contact us</div>
+            <a class="cta" href="./contacts/contacts.html">Contact us</a>
         </Section>
         <footer>
             <section class="social-wrapper">
@@ -99,6 +100,7 @@
                 <p>All rights reserved &copy;Goodluck Tailors 2019</p>
             </div>
         </footer>
-        <script src="" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="./script.js"></script> 
     </body>
 </html>
