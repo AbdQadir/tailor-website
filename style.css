@@ -478,6 +478,7 @@ footer{
     .clients header{
         width: 75%;
         margin: auto;
+        margin-bottom: 80px;
     }
 
     .customers-row{
