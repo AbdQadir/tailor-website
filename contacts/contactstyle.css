@@ -131,3 +131,32 @@
     position: relative;
     background: url("./images/contacts-footer.jpg");
 }
+
+/*responsive code starts*/
+@media screen and (max-width: 1025px){
+
+    .address-holder{
+        height: auto;
+        grid-template-columns: 50px 1fr 50px;
+        grid-template-rows: 500px 500px;
+        grid-row-gap: 40px;
+    }
+
+    .address-wrapper{
+        padding: 20px;
+    }
+    .address-holder iframe{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    #contact-form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #contact-form{
+        width: 90%;
+    }
+}
