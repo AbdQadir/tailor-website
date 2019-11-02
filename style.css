@@ -429,3 +429,103 @@ footer{
 .copyright-wrapper{
     margin-bottom: 50px;
 }
+
+/*responsive code starts*/
+
+@media screen and (max-width: 1025px){
+    .intro-half:first-child{
+        display: none;
+    }
+
+    .intro-half{
+        margin-top: 50px;
+        height: auto;
+        width: 100vw;
+        padding-bottom: 0;
+    }
+
+    .intro-text{
+        padding-left: 25px;
+    }
+
+    .img-wrapper{
+        height: 400px;
+        overflow: hidden;
+        margin-top: auto;
+    }
+
+    .work-btn{
+        margin-bottom: 50px;
+    }
+
+    .service-row{
+        grid-template-columns: 15% 1fr 15%;
+        grid-template-rows: auto auto;
+        grid-row-gap: 50px;  
+    }
+
+    .service-tile{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .clients header{
+        width: 75%;
+        margin: auto;
+    }
+
+    .customers-row{
+        grid-template-columns: 15% 1fr 15%;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 50px;
+    }
+
+    .customers-tile{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        text-align: center;
+    }
+
+    .contact h3{
+        font-size: 24px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px){
+    .navbar{
+        flex-direction: column;
+    }
+
+    .logo{
+        margin-top: 10px;
+    }
+
+    .nav-link:nth-child(2){
+        margin-right: 0;
+    }
+
+    #frontline,.contacts-banner div, .service-banner div{
+        width: 90%;
+        font-size: 36px;
+    }
+
+    .service-row{
+        grid-template-columns: 5% 1fr 5%;
+    }
+
+    .customers-row{
+        grid-template-columns: 5% 1fr 5%;
+    }
+
+    .contact p{
+        width: 90%;
+        font-size: 12px;
+    }
+
+}
+
+
