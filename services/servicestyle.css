@@ -193,3 +193,67 @@ figcaption span{
 #services-page footer div{
     z-index: 1;
 } 
+
+/*responsive code starts*/
+
+@media screen and (max-width: 1025px){
+    .service-title{
+        font-size: 36px;
+        margin-bottom: 60px;
+    }
+
+    .service-container{
+        height: auto;
+        grid-template-columns: 10% 1fr 10%;
+        grid-template-rows: 500px 500px 500px 500px 500px 500px;
+        grid-column-gap: 0;
+        grid-row-gap: 70px;
+    }
+
+    .service-img{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .service-img1{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    .service-img2{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    .service-img3{
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    
+    .service-img4{
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    
+    .service-img5{
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    
+    .service-img6{
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .service-container{
+        grid-template-columns: 50px 1fr 50px;
+        grid-template-rows: 400px 400px 400px 400px 400px 400px;
+    }
+}
+
