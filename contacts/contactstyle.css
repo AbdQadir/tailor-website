@@ -19,9 +19,11 @@
     padding-top: 80px;
     padding-bottom: 80px;
     height: 90vh;
+    width: 100%;
     display: grid;
     align-items: center;
     grid-template-columns: 8% 1fr 1fr 8%;
+    grid-column-gap: 40px;
 }
 
 .address-wrapper{
@@ -142,7 +144,11 @@
         grid-row-gap: 40px;
         grid-column-gap: 0;
     }
-
+    
+    .address-wrapper{
+        width: 100%;
+    }
+    
     .address-holder iframe{
         grid-column-start: 1;
         grid-column-end: 4;
